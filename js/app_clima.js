@@ -51,11 +51,14 @@ window.addEventListener('load' , () => {
                         iconoClima.src = '../animated/rainy-4.svg'
                         fondo.src = '../assets/Lluvia.mp4'
                         break;
-                }
+                }                
                 /* Modifico las etiqueta que se encuentran la card */
                 temperatura.textContent = `${temp}°C`;
                 ubicacion.textContent = `${ciudad}`.toUpperCase();
                 descripcion.textContent = `${desc}`.toUpperCase();
+            })
+            .catch(error => {
+                console.log(error)
             })
         })
     }
